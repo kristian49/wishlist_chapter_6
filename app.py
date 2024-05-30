@@ -1,10 +1,3 @@
-# Nama		    	    : Fransiscus Kristian Susanto
-# NIM			        : 40621100012
-# Perguruan Tinggi	    : Universitas Widyatama
-# Program		        : Essential Programming Course - Full Stack Web Development
-# ID Kegiatan		    : 8304785
-# Mitra			        : PT Global Investment Institusi
-
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -57,7 +50,7 @@ def delete_bucket():
     num_receive = request.form['num_give']
     db.bucket.delete_one(
         {'num': int(num_receive)}
-        )
+    )
     return jsonify({'msg': 'Delete done!'})
 
 @app.route("/bucket", methods=["GET"])
